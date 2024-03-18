@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Library System</title>
+    <style>
+        /* Reset CSS */
+        
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Body Styles */
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        /* Header Styles */
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        /* Container Styles */
+        
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        /* Search Form Styles */
+        
+        #search-form {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        /* Book List Styles */
+        
+        .book-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .book-item {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .book-item:hover {
+            background-color: #f0f0f0;
+        }
+        /* Book Details Styles */
+        
+        .book-details {
+            background-color: #fff;
+            padding: 20px;
+            display: none;
+            border-radius: 5px;
+        }
+        /* Featured Books Styles */
+        
+        .image-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .image-item {
+            margin-bottom: 20px;
+        }
+        
+        .image-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        /* Categories Section Styles */
+        
+        .categories {
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .category-item {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        /* Responsive Styles */
+        
+        @media screen and (max-width: 768px) {
+            input[type="text"] {
+                width: 100%;
+            }
+            input[type="submit"] {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Online Library System</h1>
+    </header>
+    <div class="container">
+        <img src="vitlib.jpg" alt="Library Image" style="width: 100%;">
+        <form id="search-form">
+            <input type="text" name="search" placeholder="Search for books">
+            <input type="submit" value="Search">
+        </form>
+        <ul class="book-list"></ul>
+        <div class="book-details">
+            <h2>Book Details</h2>
+            <p>Title: <span id="book-title"></span></p>
+            <p>Author: <span id="book-author"></span></p>
+            <p>ISBN: <span id="book-isbn"></span></p>
+            <button id="borrow-btn">Borrow</button>
+            <button id="return-btn">Return</button>
+        </div>
+    </div>
+
+    <script>
+        const books = [{
+            title: "Book 1",
+            author: "Author 1",
+            isbn: "1234567890"
+        }, {
+            title: "Book 2",
+            author: "Author 2",
+            isbn: "0987654321"
+        }, {
+            title: "Book 3",
+            author: "Author 3",
+            isbn: "5432167890"
+        }];
+
+
+        function displaySearchResults(results) {
+            const bookList = document.querySelector('.book-list');
+            bookList.innerHTML = '';
+            results.forEach(book => {
+                const li = document.createElement('li');
+                li.classList.add('book-item');
+                li.innerHTML = `<strong>${book.title}</strong> by ${book.author} (ISBN: ${book.isbn})`;
+                li.addEventListener('click', () => displayBookDetails(book));
+                bookList.appendChild(li);
+            });
+        }
+
+
+        function displayBookDetails(book) {
+            const detailsContainer = document.querySelector('.book-details');
+            document.getElementById('book-title').textContent = book.title;
+            document.getElementById('book-author').textContent = book.author;
+            document.getElementById('book-isbn').textContent = book.isbn;
+            detailsContainer.style.display = 'block';
+        }
+
+
+        document.getElementById('search-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const searchTerm = this.search.value.toLowerCase();
+            const searchResults = books.filter(book => book.title.toLowerCase().includes(searchTerm) || book.author.toLowerCase().includes(searchTerm));
+            displaySearchResults(searchResults);
+        });
+
+
+        document.getElementById('borrow-btn').addEventListener('click', function() {
+            alert('You borrowed the book!');
+        });
+
+
+        document.getElementById('return-btn').addEventListener('click', function() {
+            alert('You returned the book!');
+        });
+    </script>
+
+    <section class="image-section">
+        <div class="container">
+            <h2>Featured Books</h2>
+            <div class="image-item">
+                <img src="1.png" alt="Book Cover">
+                <p><a href="https://ia903402.us.archive.org/1/items/let-us-c/LET%20US%20C.pdf">Let us C</a></p>
+                <p><a href="https://ia903402.us.archive.org/1/items/let-us-c/LET%20US%20C.pdf">Yashwant KHanetkar</a></p>
+            </div>
+            <hr />
+            <div class="image-item">
+                <img src="2.png" alt="Book Cover">
+                <p><a href="https://ncert.nic.in/textbook.php?jemh1=1-15">NCERT class 12</a></p>
+                <p><a href="https://ncert.nic.in/textbook.php?jemh1=1-15">MATHEMATICS</a></p>
+            </div>
+            <hr />
+            <div class="image-item">
+                <img src="3.png" alt="Book Cover">
+                <p><a href="https://archive.org/details/chacha-chaudhary">COMICS</a></p>
+                <p><a href="https://archive.org/details/chacha-chaudhary">CHACHA CHOUDHARY</a></p>
+            </div><br><br>
+            <hr />
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <h2>Explore by Category</h2><br><br>
+            <div class="category-item">Fiction</div>
+            <div class="category-item">Non-Fiction</div>
+            <div class="category-item">Mystery</div>
+            <div class="category-item">Science Fiction</div>
+        </div>
+    </section><br>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Bookish. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

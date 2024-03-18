@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Papers Solving - Bookish</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4de128c7;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        main {
+            padding: 20px;
+            text-align: left; 
+        }
+        .text-container {
+            display: inline-block; /* Ensures text boxes are displayed in a row */
+            text-align: left; /* Align text within text boxes to the left */
+            margin-left:370px;
+        }
+        .text-container2 {
+            display: inline-block; /* Ensures text boxes are displayed in a row */
+            text-align: left; /* Align text within text boxes to the left */
+            margin-left:570px;
+        }
+        textarea {
+            width: 600px; /* Set width of text areas */
+            height: 30px; /* Set height of text areas */
+            margin-bottom: 0px; /* Add some space between text areas */
+            font-size: 20px;
+        }
+        input[type="file"] {
+            margin-bottom: 10px; /* Add some space between file input and button */
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #59e13e;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .pdf-icons {
+            margin-left:100px;
+            width:1400px;
+            height:600px;
+        }
+        .pdf-icons img {
+            width: 130px;
+            height: 130px;
+            margin: 30px;
+            cursor: pointer;
+        }
+        .sol{
+            margin-left:670px;
+            padding :2px;
+            font-size:20px;
+
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #4de128c7;
+            color: #fff;
+            text-align:center;
+            margin-bottom: -400px;
+            padding:10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 align="center">Exam Papers Solving</h1>
+    </header>
+    <main>
+        <div class="text-container">
+            <h2 id="enter-question" align="center">Enter Your Question</h2>
+            <!-- Form for entering question -->
+            <form action="#" method="post">
+                <textarea name="question"  class="input1" id="question" placeholder="Type your question here..."></textarea>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit" onclick="submit1()" class="btn">Submit</button>
+            </form>
+        </div>
+        <br><br><br><br>
+
+        <div class="text-container2">
+        <h2 id="upload-image" align="center">Upload Image of Question</h2>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <input type="file" class="input2" name="question-image" id="question-image">
+                <button type="submit" class="upload" onclick="upload1()">Upload</button>
+            </form>
+        </div>
+        <br><br><br><br>
+        <div class="text-container2">
+            <h2 id="upload-image" align="center">Upload Audio of Question</h2>
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <input type="file" class="input3" name="question-image" id="question-image">
+                    <button type="submit" class="upload" onclick="upload2()">Upload</button>
+                </form>
+            </div>
+            <br><br><br><br>
+        <h2>Question Papers</h2>
+        <div class="pdf-icons"><br>
+            <a href="JEE_ADV 2023.pdf" target="_blank">JEE - 2023<img src="pdf.png" alt="PDF Icon"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="JEE_ADV 2022.pdf" target="_blank">JEE - 2022<img src="pdf.png" alt="PDF Icon"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="JEE_ADV 2021.pdf" target="_blank">JEE - 2021<img src="pdf.png" alt="PDF Icon"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="JEE_ADV 2020.pdf" target="_blank">JEE - 2020<img src="pdf.png" alt="PDF Icon"></a><br><br><br>
+            <a href="NEET-2023.pdf" target="_blank">NEET - 2023<img src="pdf.png" alt="PDF Icon"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="NEET-2022.pdf" target="_blank">NEET - 2022<img src="pdf.png" alt="PDF Icon"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="NEET-2021.pdf" target="_blank">NEET - 2021<img src="pdf.png" alt="PDF Icon"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="NEET-2020.pdf" target="_blank">NEET - 2020<img src="pdf.png" alt="PDF Icon"></a><br><br><br>
+            <a href="UPSC-2023.pdf" target="_blank">UPSC - 2023<img src="pdf.png" alt="PDF Icon"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="UPSC-2022.pdf" target="_blank">UPSC - 2022<img src="pdf.png" alt="PDF Icon"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="UPSC-2021.pdf" target="_blank">UPSC -2021<img src="pdf.png" alt="PDF Icon"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="UPSC-2020.pdf" target="_blank">UPSC - 2020<img src="pdf.png" alt="PDF Icon"></a><br><br><br>
+        </div><br><br><br><br><br><br><br>
+        <div class="sol">
+        <a href="solutions.html"><button type="submit"  class="solution">Go to Solutions</button></a><br><br><br>
+        </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Bookish. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                
+            </div>
+        </div>
+    </footer>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

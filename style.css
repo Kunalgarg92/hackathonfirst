@@ -1,0 +1,556 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(fp.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.ul logo{
+    color: #c4cfc5;
+    font-size: 40px;
+    font-family: Arial;
+    padding-left:-1200px;
+    padding-top: 4px;
+    margin-top: 4px
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 25px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color:#20ef31;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #20ef31;
+    border: 2px solid #20ef31;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+.form{
+    width: 420px;
+    height: 500px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    position: absolute;
+    top: 180px;
+    left: 1100px;
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding-top: 30px;
+    padding: 20px;
+}
+
+.form h2{
+    width: 420px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #181b18;
+    font-size: 30px;
+    background-color: #e6d6d6;
+    border-radius: 10px;
+    margin-left: -6px;
+    padding: 6px;
+}
+
+.form input{
+    width: 410px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #20ef31;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.form input:focus{
+    outline: none;
+}
+
+.form2{
+    width: 420px;
+    height: 500px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    position: absolute;
+    top: 140px;
+    left: 870px;
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.form2 h2{
+    width: 420px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #181b18;
+    font-size: 30px;
+    background-color: #e6d6d6;
+    border-radius: 10px;
+    margin-left: -6px;
+    padding: 6px;
+}
+
+.form2 input{
+    width: 410px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #20ef31;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.form2 input:focus{
+    outline: none;
+}
+.form .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color:#fff;
+    padding-top: 25px;
+    padding-right:25px;
+    text-align: center;
+}
+.form .link a{
+    text-decoration: none;
+    color: #20ef31;
+}
+
+::placeholder{
+    color: #fff;
+    font-family: Arial;
+}
+
+.btnn{
+    width: 420px;
+    height: 40px;
+    background: #20ef31;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+.btnn:hover{
+    background: #fff;
+    color: #20ef31;
+}
+.btnn a{
+    text-decoration: none;
+    color: #0c0c0c;
+    font-weight: bold;
+}
+.form2 .link2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color:#fff;
+    padding-top: 25px;
+    padding-right:25px;
+    text-align: center;
+}
+.form2 .link2 a{
+    text-decoration: none;
+    color: #20ef31;
+}
+.about{
+    width: 1450px;
+    height: 570px;
+    background: linear-gradient(to top, rgba(48, 180, 34, 0.8)50%,rgba(35, 187, 55, 0.8)50%);
+    position: absolute;
+    font-family: calibri;
+    top:150px;
+    left:22px;
+    font-size:20px;
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding: 20px;
+    color:#111010;
+}
+
+
+
+
+
+
+
+
+
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.middle-section {
+    background-image: url('hackathonlive/book.png');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0; /* Adjust as needed */
+}
+
+.middle-section .container {
+    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to improve readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* Header Styles */
+.header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.nav-link {
+    margin-top: -30px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size:20px;
+    margin:20px;
+    margin-top: -40px;
+    margin-bottom:10px;
+    transition:color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffc107;
+}
+
+/* Main Section Styles */
+.main-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.main-section h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+/* Feature Section Styles */
+.feature-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.feature {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature i {
+    font-size: 2rem;
+    color: #343a40;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffc107;
+}
+
+/* Background Animations */
+.background-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background-animation img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    animation: animateBackground 60s linear infinite;
+}
+
+@keyframes animateBackground {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.quote2{
+    color: black;
+}
+.namoshiv{
+    background-color:#3652AD;
+    height: 620px;
+}
+.pari{
+    color:#f92b57 ;
+}
+.kunalyup{
+    padding-top: 50px;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    padding-bottom: 50px;
+}
+.row2{
+    text-align: center;
+}
+.chunu{
+   color: white;
+   font-size: 15px;
+}
+.chunua{
+    color:#f92b57 ;
+}
+.don2{
+    height: 115px;
+    text-align: center;
+    border-radius: 50%;
+    border-color: white;
+}
+.nandi{
+    color: grey;
+    font-size: 60px;
+    position: relative;
+    top: 20px;
+}
+.chunchuna{
+    color: white;
+    font-size: 15px;
+    margin-right: -10px;
+}
+
+.ramji{
+    color: white;
+}
+.ramjiram{
+    padding-top: 15px;
+    color: white;
+    padding-left: 140px;
+    font-size: 45px;
+}
+.ramjiramji{
+    color: white;
+}
+.secondfooter{
+    background-color: #2d3040;
+    height: 280px;
+}
+.cuti{
+    color: white;
+   padding-left: 140px;
+}
+.cati{
+    color: white;
+    padding-left: 80px;
+}
+.svg{
+    margin-left: 160px;
+}
+.yummy{
+    color: white;
+    font-size: 20px;
+    padding-right: 10px;
+}
+.hippo{
+    padding-top: 30px;
+}
+
+
+*{margin: 0;
+    padding: 0;}
+    
+nav{
+    background-color: #003366;
+    height:50px;
+    display:flex;
+    justify-content: start;
+}
+nav .nave {
+    display: flex;
+    flex-direction:row;
+    background-color:#ffffff;
+    color:#f1f1f1;
+
+
+}
+nav .nave{
+
+    padding:15px 20px 36px 20px;
+    list-style: none;
+}
+nav .nave:hover{
+    color: white;
+    background-color: #003366;
+
+}
+.dropbtn {
+    background-color: #003366;
+    color: white;
+    padding:15px 20px 20px 20px;
+  
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #003366;
+}
+
+
+
+
+
+
